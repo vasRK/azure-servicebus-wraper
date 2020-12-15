@@ -6,7 +6,6 @@ import {
   ServiceBusSender,
   ServiceBusSessionReceiverOptions,
 } from '@azure/service-bus';
-import { AZURE_SERVICEBUS_CONNECTION_STRING, AZURE_SERVICEBUS_QUEUE } from './app-config';
 
 export class MessageService {
   private sbClient: ServiceBusClient;
