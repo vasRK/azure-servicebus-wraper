@@ -1,1 +1,1 @@
-# azure-servicebus-wraper
+# azure-servicebus-wrapper
