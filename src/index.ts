@@ -2,6 +2,7 @@ import {
   ReceiveMessagesOptions,
   ServiceBusClient,
   ServiceBusMessage,
+  ServiceBusReceivedMessage,
   ServiceBusReceiver,
   ServiceBusSender,
   ServiceBusSessionReceiverOptions,
@@ -30,6 +31,10 @@ export class MessageService {
 
   async GetMessages(count: number, options?: ReceiveMessagesOptions) {
     return await this.receiver.receiveMessages(count, options);
+  }
+
+  async CompleteMessage(message: ServiceBusReceivedMessage) {
+    return await this.receiver.completeMessage(message);
   }
 
   async CleanUP() {
